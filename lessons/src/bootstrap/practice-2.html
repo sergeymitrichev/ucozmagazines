@@ -1,10 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>123</h1>
-</body>
-</html>
+<!-- 1. Ненумерованный список -->
+<ul class="shop-options">
+    <?if($BRAND$)?><li><span class="opt"><!--<s4379>-->Производитель<!--</s>-->:</span> <span class="val">$BRAND$</span></li><?endif?>
+    <?if($ART_NO$)?><li><span class="opt"><!--<s4749>-->Артикул<!--</s>-->:</span> <span class="val art">$ART_NO$</span></li><?endif?>
+    <li><span class="opt"><!--<s4377>-->Наличие<!--</s>-->:</span> <span class="val stock">$STOCK$</span></li>
+    <?if($WARR$)?><li><span class="opt"><!--<s4376>-->Гарантия<!--</s>-->:</span> <span class="val">$WARR$</span></li><?endif?>
+    <?if($UNIT$)?><li><span class="opt"><!--<s4750>-->Единица<!--</s>-->:</span> <span class="val">$UNIT$</span></li><?endif?>
+    <?if($WEIGHT$)?><li><span class="opt"><!--<s4751>-->Вес<!--</s>-->:</span> <span class="val">$WEIGHT$</span></li><?endif?>
+    <?if($ENTRY_TYPE$ == 1)?><li><span class="opt"><!--<s5119>-->Размер<!--</s>-->:</span> <span class="val">$FILE_SIZE$</span></li><?endif?>
+    <?if($TAGS$)?>Теги: $TAGS$<?endif?>
+</ul>
+
+<!-- 2. Нумерованный список -->
+<ol class="shop-options">
+    <?if($BRAND$)?><li><span class="opt"><!--<s4379>-->Производитель<!--</s>-->:</span> <span class="val">$BRAND$</span></li><?endif?>
+    <?if($ART_NO$)?><li><span class="opt"><!--<s4749>-->Артикул<!--</s>-->:</span> <span class="val art">$ART_NO$</span></li><?endif?>
+    <li><span class="opt"><!--<s4377>-->Наличие<!--</s>-->:</span> <span class="val stock">$STOCK$</span></li>
+    <?if($WARR$)?><li><span class="opt"><!--<s4376>-->Гарантия<!--</s>-->:</span> <span class="val">$WARR$</span></li><?endif?>
+    <?if($UNIT$)?><li><span class="opt"><!--<s4750>-->Единица<!--</s>-->:</span> <span class="val">$UNIT$</span></li><?endif?>
+    <?if($WEIGHT$)?><li><span class="opt"><!--<s4751>-->Вес<!--</s>-->:</span> <span class="val">$WEIGHT$</span></li><?endif?>
+    <?if($ENTRY_TYPE$ == 1)?><li><span class="opt"><!--<s5119>-->Размер<!--</s>-->:</span> <span class="val">$FILE_SIZE$</span></li><?endif?>
+    <?if($TAGS$)?>Теги: $TAGS$<?endif?>
+</ol>
+
+<!-- 3. Список без маркеров -->
+<ol class="shop-options list-unstyled">
+    <?if($BRAND$)?><li><span class="opt"><!--<s4379>-->Производитель<!--</s>-->:</span> <span class="val">$BRAND$</span></li><?endif?>
+<?if($ART_NO$)?><li><span class="opt"><!--<s4749>-->Артикул<!--</s>-->:</span> <span class="val art">$ART_NO$</span></li><?endif?>
+<li><span class="opt"><!--<s4377>-->Наличие<!--</s>-->:</span> <span class="val stock">$STOCK$</span></li>
+<?if($WARR$)?><li><span class="opt"><!--<s4376>-->Гарантия<!--</s>-->:</span> <span class="val">$WARR$</span></li><?endif?>
+<?if($UNIT$)?><li><span class="opt"><!--<s4750>-->Единица<!--</s>-->:</span> <span class="val">$UNIT$</span></li><?endif?>
+<?if($WEIGHT$)?><li><span class="opt"><!--<s4751>-->Вес<!--</s>-->:</span> <span class="val">$WEIGHT$</span></li><?endif?>
+<?if($ENTRY_TYPE$ == 1)?><li><span class="opt"><!--<s5119>-->Размер<!--</s>-->:</span> <span class="val">$FILE_SIZE$</span></li><?endif?>
+<?if($TAGS$)?>Теги: $TAGS$<?endif?>
+</ol>
+
+<!-- 4. Список дескриптор -->
+<dl class="shop-options">
+    <?if($BRAND$)?><dt class="opt"><!--<s4379>-->Производитель<!--</s>-->:</dt> <dd class="val">$BRAND$</dd><?endif?>
+    <?if($ART_NO$)?><dt class="opt"><!--<s4749>-->Артикул<!--</s>-->:</dt> <dd class="val art">$ART_NO$</dd><?endif?>
+    <dt class="opt"><!--<s4377>-->Наличие<!--</s>-->:</dt> <dd class="val stock">$STOCK$</dd>
+    <?if($WARR$)?><dt class="opt"><!--<s4376>-->Гарантия<!--</s>-->:</dt> <dd class="val">$WARR$</dd><?endif?>
+    <?if($UNIT$)?><dt class="opt"><!--<s4750>-->Единица<!--</s>-->:</dt> <dd class="val">$UNIT$</dd><?endif?>
+    <?if($WEIGHT$)?><dt class="opt"><!--<s4751>-->Вес<!--</s>-->:</dt> <dd class="val">$WEIGHT$</dd><?endif?>
+    <?if($ENTRY_TYPE$ == 1)?><dt class="opt"><!--<s5119>-->Размер<!--</s>-->:</dt> <dd class="val">$FILE_SIZE$</dd><?endif?>
+    <?if($TAGS$)?><dt>Теги:</dt> <dd>$TAGS$</dd><?endif?>
+</dl>
+
+<!-- 5. Горизонтальный список дескриптор -->
+<dl class="shop-options dl-horizontal">
+    <?if($BRAND$)?><dt class="opt"><!--<s4379>-->Производитель<!--</s>-->:</dt> <dd class="val">$BRAND$</dd><?endif?>
+    <?if($ART_NO$)?><dt class="opt"><!--<s4749>-->Артикул<!--</s>-->:</dt> <dd class="val art">$ART_NO$</dd><?endif?>
+    <dt class="opt"><!--<s4377>-->Наличие<!--</s>-->:</dt> <dd class="val stock">$STOCK$</dd>
+    <?if($WARR$)?><dt class="opt"><!--<s4376>-->Гарантия<!--</s>-->:</dt> <dd class="val">$WARR$</dd><?endif?>
+    <?if($UNIT$)?><dt class="opt"><!--<s4750>-->Единица<!--</s>-->:</dt> <dd class="val">$UNIT$</dd><?endif?>
+    <?if($WEIGHT$)?><dt class="opt"><!--<s4751>-->Вес<!--</s>-->:</dt> <dd class="val">$WEIGHT$</dd><?endif?>
+    <?if($ENTRY_TYPE$ == 1)?><dt class="opt"><!--<s5119>-->Размер<!--</s>-->:</dt> <dd class="val">$FILE_SIZE$</dd><?endif?>
+    <?if($TAGS$)?><dt>Теги:</dt> <dd>$TAGS$</dd><?endif?>
+</dl>
